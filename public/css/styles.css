@@ -135,7 +135,7 @@ main section article i{
     border-radius: 50%;
     position: absolute; 
     right: 20px;  
-    bottom: 30px; 
+    top: -15px; 
 }
 
 main section h3{
@@ -146,6 +146,7 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 /* Parte del Footer */
