@@ -17,30 +17,40 @@ h3{
 p{
     font-size: 12px;
 }
-div.top-header{
+header div.top-header{
     display: flex;
-    padding: 2%;
+    padding: 2% 0px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 
 header{
+    position: fixed;
+    top: 0px;
     background-color: #EAC926;
+    width: 100%;
+    z-index: 100;
 }
 
 header div.logo{
     display: flex;
-    width: 50%;
-    padding: 10px;
+    width: 40%;
+    padding: 10px 0px;
 }
 
 header div.form { 
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    width: 40%;
     align-self: center;
-    padding: 2px;
+    padding: 2px 0px;
     font-size: 11px;
+}
+
+header label.buscador{
+    display: flex;
+    justify-content: center;
 }
 header nav{
     display: none;
@@ -97,8 +107,10 @@ div.burger-menu i{
     width: 40px;
 }
 
-/* Main/Body  */
-
+/* Home */
+body section.banner { 
+    margin-top: 150px;
+}
 main section div.products{
     display: flex;
     flex-direction: row;
@@ -116,7 +128,9 @@ main section div.products{
     font-size: 16px;
     font-weight: normal;
 }
-
+.description{ 
+    display: none;
+}
 h3,
 .description{
     color: #666;
@@ -133,7 +147,10 @@ section.banner img{
 
 main{
     width: 90%;
-    margin: 0 auto;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main section article{
@@ -161,6 +178,18 @@ main section article i{
     position: absolute; 
     right: 20px;  
     top: -15px; 
+    transition: transform 1s;
+}
+main section div.products article:hover i { 
+    transform: rotate(-90deg);
+}
+
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article:hover .description{
+    display: block;
 }
 
 main section h3{
@@ -179,8 +208,10 @@ article div.main-article{
 /* Parte del Footer */
 
 footer{
-    background-color: #ebebeb;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb; 
+/*    box-shadow: 0px 0px 10px rgb(100, 100, 100); */
     width: 90%;
     margin: 14px auto;
 }
@@ -190,7 +221,7 @@ footer{
 }
 
 footer div {
-    background-color: #FFF;
+    background-color: #ebebeb;
     text-align: center;
     box-sizing: border-box;
     border-bottom: 1rem;
@@ -210,40 +241,104 @@ footer div i{
     box-sizing: border-box;
 }
 
+/* Register */
+
+/*PARA AMBOS MAINs*/
+main input { 
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px ;
+    border: none; /* <-- This thing here */
+    border:solid 1px #ccc;
+    border-radius: 10px;
+}
+
+.main-register div.profile { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20%;
+}
+
+.main-register div.interests input,
+.main-register div.profile input { 
+    width: 20px;
+}
+
+.main-register div.profile label { 
+    display: flex;
+    margin-top: 17px;
+    flex-grow: 0.4;
+}
+
+.main-register div.interests { 
+    display: flex;
+    flex-direction: column;
+}
+main div.interests  div { 
+    display: flex;
+    flex-direction: row;
+}
+
+main div.interests label{ 
+    margin: 15px;
+}
+/* Login */
+
+main input.Enviar { 
+    background-color: #0044AA;
+    color: #FFF;
+} 
+
 /* Parte Responsive */
 
 @media (min-width: 361px){
     /* PARTE TABLET */
-    .description { 
-        display: block;
-    }
-
     /* #productos en el main */
 
     main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 40%;
     }
+    
+    header div.top-header { 
+        padding: 10px 5px;
+    }
+    header nav {
+        padding: 10px 5vh;
+    }
     header .top-header .logo,
-    header .top-header .form, 
-    header .top-header .cuotasSinTarjeta{
-        display: flex;
-        width: 33%;
+    header .top-header .form{
+        width: 200px;
      }
 
      header .top-header .cuotasSinTarjeta { 
          margin-top: 3%;
+         width: 290px;
      }
 
 }
 
-@media (min-width: 769px){
+@media (min-width: 719px){
     /* PARTE DESKTOP */
+    body section.banner {
+        margin-top: 100px;
+    }
+
+    header .top-header .logo, 
+    header .top-header .form,
+    header .top-header .cuotasSinTarjeta { 
+        width: 232px;
+    }
+    header .top-header .cuotasSinTarjeta{
+        margin-top: 26px;
+    }
     main section article { 
         width: 20%;
     }
 
-
+    footer { 
+        flex-direction: row;
+    }
     .burger-menu{
         display: none;
     }
@@ -253,6 +348,7 @@ footer div i{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }       
+    }      
+
 }
 

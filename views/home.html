@@ -12,6 +12,7 @@
         <script src="https://kit.fontawesome.com/7b3e407e09.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/styles.css">
     </head>
+
     <body>
         <header>
             <div class="top-header">
@@ -25,11 +26,13 @@ buscar y con SUBTIM, el tag I hace referencia a los iconos -->
 <!-- las clases que se ven medio raras se deben a los iconos/logos  que obtuvimos de internet -->
 
                 <div class="form" action="#" method="GET">
-                    <div class="input">Buscar productos, marcas y más</div> 
-                    <div class="submit" >
-                        <i class="fa fa-search"></i>
-                    </div>
+                    <form action="/" > 
+                    <label for="search" class="buscador">
+                        <input type="search" placeholder="Buscar productos, marcas y más">
+                        <button class="submit"> <i class="fa fa-search"></i> </button>
+                    </label>
                 </div>
+                
 <!-- Hubo cambios con el tipo de elemento de input etc -->
                 <div class="cuotasSinTarjeta">
                     <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
@@ -173,6 +176,6 @@ buscar y con SUBTIM, el tag I hace referencia a los iconos -->
                     puedas hacer porque estás siempre protegid@ </p>
             </div>
         </footer>
-        
+
     </body>
 </html>
