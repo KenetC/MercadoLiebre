@@ -1,9 +1,9 @@
 {
-  "name": "CSS",
+  "name": "MercadoLiebre",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
+    "scripts": {
     "test": "node app.js"
   },
   "keywords": [],
