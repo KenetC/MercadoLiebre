@@ -49,10 +49,13 @@ header div.form {
 }
 
 div.top-header input { 
-    border:solid 1px #ccc;
+    border:solid 1px #FFF;
     border-radius: 10px;    
 }
 header label.buscador{
+    background-color:white;
+    margin:0px 20px ;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
 }
@@ -87,9 +90,10 @@ header .form .input{
 }
 header .form .submit{
     background-color: #FFF;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     color: #666;
     width: 10%;
+    border-radius: 10px;
 }
 
 header div.top-header p{
