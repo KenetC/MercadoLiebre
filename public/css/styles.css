@@ -34,9 +34,8 @@ header{
     z-index: 100;
 }
 
-header div.logo{
+header a.logo{
     display: flex;
-    width: 40%;
     padding: 10px 0px;
 }
 
@@ -241,6 +240,12 @@ footer div i{
     height: 40px;
     margin: 30px 0px 0px 0px;
     box-sizing: border-box;
+    transition: all 450ms;
+}
+
+footer div i:hover { 
+    font-size: 45px;
+    color: #47E35D;
 }
 
 .description2{
@@ -295,11 +300,19 @@ main div.interests  div {
 main div.interests label{ 
     margin: 15px;
 }
+
+.main-register input.enviar,
+.main-register input.borrar{ 
+    width: 80px;
+    background-color:#0044AA;
+    color: white;
+}
 /* Login */
 
 main input.Enviar { 
     background-color: #0044AA;
     color: #FFF;
+    width: 80px;
 } 
 
 /* Parte Responsive */
@@ -341,7 +354,7 @@ main input.Enviar {
         width: 232px;
     }
     header .top-header .cuotasSinTarjeta{
-        margin-top: 26px;
+        margin-top: 22px;
     }
     main section article { 
         width: 20%;
